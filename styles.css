@@ -27,7 +27,7 @@ main {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   gap: 120px;
 }
@@ -36,19 +36,18 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   height: 100%;
   width: 100%;
-  margin-top: -250px;
+  margin-top: -350px;
 }
 
-.separator {
+/* .separator {
   height: 55vh;
   width: 2px;
   background-color: black;
-  position: absolute;
-  top: 333px;
-  left: 868px;
-}
+ 
+} */
 
 .changelog>ul {
   display: flex;
@@ -80,6 +79,21 @@ li:nth-child(6) {
 li:nth-child(7) {
   margin-left: 30px;
 }
+
+
+button {
+  width: 250px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: black;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 55px;
+  cursor: pointer;
+}
+
 
 /* Responsive */
 @media (max-width: 768px) {
