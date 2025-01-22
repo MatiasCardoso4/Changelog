@@ -40,6 +40,7 @@ main {
   height: 100%;
   width: 100%;
   margin-top: -350px;
+  margin-left: 50px;
 }
 
 /* .separator {
@@ -49,10 +50,31 @@ main {
  
 } */
 
-.changelog>ul {
+.changelog>ul{
   display: flex;
   flex-direction: column;
   gap: 50px;
+  position: relative;
+}
+
+
+.changelog > ul::before {
+  content: '';
+  width: 2px;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  left: 30%;
+  margin-left: 3px;
+}
+
+.dates {
+  color: rgb(202, 202, 202);
+  font-weight: bold;
+}
+
+.projects{
+  font-weight: bold;
 }
 
 .changelog>ul>li {
@@ -61,11 +83,15 @@ main {
   width: 100%;
 }
 
-.ball {
+.circle {
   width: 20px;
   height: 20px;
   background-color: black;
   border-radius: 50%;
+}
+
+li:nth-child(1) {
+  margin-left: 2px;
 }
 
 li:nth-child(2),
@@ -96,21 +122,12 @@ button {
 
 
 /* Responsive */
-@media (max-width: 768px) {
-  main {
-    position: relative;
+@media (max-width: 1024px) {
+ 
+  .changelog > ul::before {
+    margin-left: -1px;
   }
-
-
-  .separator {
-    position: absolute;
-    right: 1130px;
-  }
-
-  .changelog {
-    gap: 50px;
-  }
-
+ 
   .changelog>ul>li {
     gap: 10px;
   }
