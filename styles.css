@@ -39,16 +39,10 @@ main {
   flex-direction: column;
   height: 100%;
   width: 100%;
-  margin-top: -350px;
+  margin-top: -90px;
   margin-left: 50px;
 }
 
-/* .separator {
-  height: 55vh;
-  width: 2px;
-  background-color: black;
- 
-} */
 
 .changelog>ul {
   display: flex;
@@ -58,15 +52,15 @@ main {
 }
 
 
-.changelog>ul::before {
+.changelog>.separator {
   content: '';
   width: 2px;
-  height: 66vh;
-  max-height: 100%;
+  height:53vh;
   background-color: black;
   position: absolute;
-  left: 30%;
-  margin-left: 3px;
+  left: 45%;
+  margin-left: 12px;
+  margin-bottom: 125px;
 }
 
 .dates {
@@ -117,7 +111,7 @@ button {
   color: #fff;
   font-size: 16px;
   font-weight: bold;
-  margin-top: 55px;
+  margin-top: 85px;
   cursor: pointer;
 }
 
@@ -130,7 +124,7 @@ button {
   }
 
 
-  .changelog>ul::before {
+  .separator {
     margin-left: 1px;
   }
 
@@ -146,7 +140,7 @@ button {
   }
 
 
-  .changelog>ul::before {
+  .separator{
     margin-left: 7px;
   }
 
@@ -171,7 +165,7 @@ button {
     margin-left: 2px;
   }
 
-  .changelog>ul::before {
+  .separator {
     margin-left: 8px;
   }
 }
