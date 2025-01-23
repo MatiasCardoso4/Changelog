@@ -50,7 +50,7 @@ main {
  
 } */
 
-.changelog>ul{
+.changelog>ul {
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -58,10 +58,11 @@ main {
 }
 
 
-.changelog > ul::before {
+.changelog>ul::before {
   content: '';
   width: 2px;
-  height: 100%;
+  height: 66vh;
+  max-height: 100%;
   background-color: black;
   position: absolute;
   left: 30%;
@@ -73,14 +74,14 @@ main {
   font-weight: bold;
 }
 
-.projects{
+.projects {
   font-weight: bold;
 }
 
 .changelog>ul>li {
   display: flex;
-  gap: 20px;
   width: 100%;
+  gap: 20px;
 }
 
 .circle {
@@ -123,14 +124,85 @@ button {
 
 /* Responsive */
 @media (max-width: 1024px) {
- 
-  .changelog > ul::before {
-    margin-left: -1px;
+
+  .changelog {
+    margin-left: 0;
   }
- 
+
+
+  .changelog>ul::before {
+    margin-left: 1px;
+  }
+
+  .changelog>ul>li {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .changelog {
+    margin-right: 20px;
+  }
+
+
+  .changelog>ul::before {
+    margin-left: 7px;
+  }
+
   .changelog>ul>li {
     gap: 10px;
   }
 
+  .changelog>ul>li>.projects {
+    font-size: 14px;
+  }
 
+}
+
+@media (max-width: 640px) {
+
+  .changelog {
+    margin-right: 20px;
+    width: 100%;
+  }
+
+  .changelog .circle {
+    margin-left: 2px;
+  }
+
+  .changelog>ul::before {
+    margin-left: 8px;
+  }
+}
+
+
+
+
+
+@media (max-width: 480px) {
+
+  .changelog {
+    margin-right: 20px;
+    width: 100%;
+  }
+
+  .changelog>ul::before {
+    margin-left: 3px;
+  }
+
+
+  .changelog>ul>li {
+    gap: 5px;
+  }
+
+  .changelog>ul>li>.projects {
+    font-size: 12px;
+  }
+
+  button {
+    width: 200px;
+    padding: 10px;
+    font-size: 14px;
+  }
 }
